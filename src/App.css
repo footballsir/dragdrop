@@ -1,38 +1,294 @@
-.App {
-  text-align: center;
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
+.font-body {
+  font-family: Segoe UI Variable;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+.font-subtitle {
+  font-family: Segoe UI Variable;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.font-caption-1 {
+
+  font-family: Segoe UI Variable;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+}
+
+.color-foreground-neutral-1 {
+  color: rgba(0, 0, 0, 0.86);
+}
+
+.color-foreground-hint {
+  color: rgba(0, 0, 0, 0.56)
+}
+
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/desktop-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.thumbnail {
+  position: absolute;
+  z-index: 1;
+  height: 150px;
+  width: 240px;
+  overflow: hidden;
+  border-radius: 8px;
+  opacity: 0.85;
+  background-color: #ffffff;
+  /* Material/Acrylic/Acrylic + Shadow 32 */
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.14);
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  width: 1440px;
+  height: 800px;
+  min-height: 800px;
+  min-width: 1440px;
+  background-color: rgba(245, 245, 245, 0.85);
+  box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.22), 0px 32px 64px 0px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(120px);
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-and-tab {
+  width: 100%;
+  height: 32px;
   display: flex;
-  flex-direction: column;
+  gap: 8px;
+}
+
+.app-close {
+  height: 44px;
+  width: 132px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.toolbar-and-omnibox {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  gap: 8px;
+}
+
+.favorites {
+  width: 100%;
+  ;
+  height: 28px;
+}
+
+.omnibox {
+  height: 30px;
+  width: 100%;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.70);
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  position: relative;
+  gap: 8px;
+  display: flex;
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.container-left {
+  width: 0px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+  min-height: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-shrink: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.container-right {
+  width: 0px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+  min-height: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-left:hover {
+  border: 1px solid #2169EB;
+}
+
+.container-right:hover {
+  border: 1px solid #2169EB;
+}
+
+.tab {
+  display: flex;
+  gap: 2px
+}
+
+.tab-item-active {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+}
+
+.tab-item {
+  display: flex;
+  height: 32px;
+  width: 240px;
+  padding: 0 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.tab-item-hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.tab-fav {
+  height: 16px;
+  width: 16px;
+}
+
+.tab-close {
+  height: 16px;
+  width: 16px;
+}
+
+.overlay-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  height: 100%;
+  border-radius: 4px;
+  background: rgba(252, 252, 252, 0.85);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.overlay-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  border-radius: 4px;
+  background: rgba(252, 252, 252, 0.85);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.3s linear;
+}
+
+/* .overlay-right:hover{
+  border: 1px solid #2169EB;
+}
+
+.overlay-left:hover{
+  border: 1px solid #2169EB;
+} */
+
+.overlay-hint {
+  min-width: 144px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.select-options {
+  z-index: 99;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 32px;
+  width: 192px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+  border: none;
+  border-right: 8px solid transparent;
+  padding: 0px 8px;
+}
+
+.font-split-hint {
+  color: rgba(0, 0, 0, 0.16);
+}
+
+.font-split-hint-active {
+  background: linear-gradient(95deg, rgba(33, 105, 235, 0.90) 18.88%, rgba(33, 105, 235, 0.60) 83.61%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
