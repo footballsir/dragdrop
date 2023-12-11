@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dragdrop/static/css/main.ee28d038.css",
+    "main.js": "/dragdrop/static/js/main.7718048a.js",
+    "static/js/787.a5f32d8c.chunk.js": "/dragdrop/static/js/787.a5f32d8c.chunk.js",
+    "static/media/contentyoutube.png": "/dragdrop/static/media/contentyoutube.b841926eab5684a38618.png",
+    "static/media/contentexpedia.png": "/dragdrop/static/media/contentexpedia.02b8e3217447297e58f9.png",
+    "static/media/contentamazon.png": "/dragdrop/static/media/contentamazon.bc5a6255ee9f7c9b4953.png",
+    "static/media/desktop-image.png": "/dragdrop/static/media/desktop-image.b12aa5e52df8edc02615.png",
+    "static/media/contentgoogle.png": "/dragdrop/static/media/contentgoogle.6b5acde614a57730df13.png",
+    "static/media/favorites.png": "/dragdrop/static/media/favorites.e28a05778fceb53fd6f4.png",
+    "index.html": "/dragdrop/index.html",
+    "main.ee28d038.css.map": "/dragdrop/static/css/main.ee28d038.css.map",
+    "main.7718048a.js.map": "/dragdrop/static/js/main.7718048a.js.map",
+    "787.a5f32d8c.chunk.js.map": "/dragdrop/static/js/787.a5f32d8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee28d038.css",
+    "static/js/main.7718048a.js"
+  ]
+}
